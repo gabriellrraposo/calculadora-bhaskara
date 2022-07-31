@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+form {
+    width: 30%;
+
+    margin: auto;
+    margin-top: 2%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    width: 25%;
+
+    margin: 1% 0 2.5% 0;
+}
+
+form button {
+    width: 25%;
+
+    padding: 1.5% 1%;
+    margin-top: 2%;
+    
+    font-size: 95%;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(28, 89, 180);
+
+    border: none;
+}
