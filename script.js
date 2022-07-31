@@ -7,12 +7,18 @@ let Bhaskara = function() {
     B = b[0].value
     C = c[0].value
 
+    let mostraResultado = function(resultado) {
+        document.getElementById("formularioCalculadora")
+        console.log(formularioCalculadora.innerHTML)
+        formularioCalculadora.innerHTML = formularioCalculadora.innerHTML + `<label>${resultado}</label>`
+    }
+    
     let delta = function() {
         return B ** 2 - 4 * A * C
     }
 
     if (delta() < 0) {
-        return "Delta negativo. Logo não há raízes da equação."
+        return mostraResultado("Delta negativo. Logo não há raízes da equação.")
     }
 
     delta()
@@ -26,11 +32,13 @@ let Bhaskara = function() {
         return resX2
     }
 
-    if (x1 == x2) {
-        return `Resultado: ${x1()}`
+    if (x1() == x2()) {
+        return mostraResultado(`Resultado: ${x1()}`)
     } else if (x2() > x1()) {
-        return `Resutados: ${x2()} and ${x1()}`
+        return mostraResultado(`Resutados: ${x2()} and ${x1()}`)
     }
-    return `Resultados: ${x1()} and ${x2()}`
+    return mostraResultado(`Resultados: ${x1()} and ${x2()}`)
 }
+
+
 
